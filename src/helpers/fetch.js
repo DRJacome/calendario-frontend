@@ -1,3 +1,7 @@
+// URL local desarrollo.
+// const baseURL = process.env.REACT_APP_API_URL_LOCAL;
+
+// URL proudcción hosting externa.
 const baseURL = process.env.REACT_APP_API_URL;
 
 /* const fetchSinToken = (enpoint, data, method = 'GET') => { } */
