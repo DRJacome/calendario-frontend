@@ -1,11 +1,10 @@
-import moment from "moment";
 import { types } from '../types/types';
-const estadoInicial = {
-    events: [
-        {
-            id: new Date().getTime(),
-            title: 'Recordatorio de cumpleaños',
-            start: moment().toDate(),
+
+/* 
+{
+            id: 425134613312,
+            title: 'Cumpleaños del jefe',
+            start : moment().toDate(),
             end: moment().add(2, 'hours').toDate(),
             bgcolor: '#fafafa',
             notes: 'Comprar tarta de cumpleaños',
@@ -14,11 +13,14 @@ const estadoInicial = {
                 name: 'David'
             }
         }
-    ],
+*/
+
+const estadoInicial = {
+    events: [],
     activeEvent: null
 };
 
-export const calendarReducer = (state = estadoInicial, action) => {
+export const CalendarReducer = (state = estadoInicial, action) => {
     switch (action.type) {
         case types.setActiveEvent:
             return {
@@ -52,6 +54,15 @@ export const calendarReducer = (state = estadoInicial, action) => {
                     event => (event.id !== state.activeEvent.id)
                 ),
                 activeEvent: null
+            }
+        case types.loadEvent:
+            return {
+                ...state,
+                events: [...action.payload]
+            }
+        case types.eventLogout:
+            return {
+                ...estadoInicial
             }
         default:
             return state;

@@ -9,7 +9,7 @@ import Swal from 'sweetalert2'
 import 'react-datetime-picker/dist/DateTimePicker.css';
 import 'react-calendar/dist/Calendar.css';
 import 'react-clock/dist/Clock.css';
-import { addNewEvent, clearActiveEvent, updateEvent } from '../../actions/eventos';
+import { clearActiveEvent, eventStartAddNew, eventStartUpdate } from '../../actions/eventos';
 
 
 
@@ -89,20 +89,13 @@ export const CalendarModal = () => {
 
         // Realizar grabación de datos.
         if (activeEvent) {
+
             // Actualizar evento existente.
-            dispatch(updateEvent(valoresFormulario))
+            dispatch(eventStartUpdate(valoresFormulario));
         } else {
+            
             // Crear nuevo evento.
-            dispatch(addNewEvent(
-                {
-                    ...valoresFormulario,
-                    id: new Date().getTime(),
-                    user: {
-                        _id: '123',
-                        name: 'David'
-                    }
-                }
-            ));
+            dispatch(eventStartAddNew(valoresFormulario));
         }
 
         setTituloEventoValido(true);
