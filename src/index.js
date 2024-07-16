@@ -14,12 +14,10 @@ Font awesome en index.html: <link rel="stylesheet" href="https://cdnjs.cloudflar
 en store.js: const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 */
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { CalendarApp } from './CalendarApp';
-import './styles.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { CalendarApp } from "./CalendarApp";
+import "./styles.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <CalendarApp />
-);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<CalendarApp />);

@@ -1,7 +1,10 @@
 export const LoadingScreen = () => {
     return (
-        <div>
-            <h5>Cargando...</h5>
+        <div className='loading-screen'>
+            <h3>Cargando</h3>
+            <span className='punto'>.</span>
+            <span className='punto'>.</span>
+            <span className='punto'>.</span>
         </div>
-    )
-}
+    );
+};
