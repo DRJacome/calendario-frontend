@@ -55,14 +55,13 @@ export const LoginScreen = () => {
                 "error"
             );
         }
-        console.log("?");
         dispatch(startRegistro(registroName, registroEmail, registroPassword1));
     };
 
     return (
         <main className='container login-container'>
             <header className='titulo'>
-                <h1>Calendario MERN</h1>
+                <h1>WebApp Calendario</h1>
                 <hr />
             </header>
             <section className='row'>
