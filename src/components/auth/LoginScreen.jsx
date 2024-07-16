@@ -36,7 +36,7 @@ export const LoginScreen = () => {
 
     const gestionarLogin = (evento) => {
         evento.preventDefault();
-        console.log(valoresFormularioLogin);
+        //  console.log(valoresFormularioLogin);
         dispatch(startLogin(loginEmail, loginPassword));
     };
 

@@ -70,7 +70,7 @@ export const startChecking = () => {
         const respuesta = await fetchConToken("auth/renew");
         const body = await respuesta.json();
 
-        console.log(body);
+     //console.log(body);
 
         if (body.ok) {
             localStorage.setItem("token", body.token);

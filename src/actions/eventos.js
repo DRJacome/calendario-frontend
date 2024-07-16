@@ -15,7 +15,7 @@ export const eventStartAddNew = (evento) => {
             // Parsea el cuerpo de la respuesta como JSON
             const mensaje = await respuesta.json();
 
-            console.log(mensaje);
+          //  console.log(mensaje);
 
             // Si la respuesta es exitosa (body.ok es verdadero), procede con el dispatch (actualización del estado de la aplicación) del nuevo evento
             if (mensaje.ok) {
